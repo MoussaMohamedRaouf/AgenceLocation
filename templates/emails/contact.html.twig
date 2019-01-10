@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        d = new Date();
+        document.write("<p><span style='color:#8aa;'>");
+        document.write(d.toLocaleDateString());
+        document.write("</span></p>");
+    </script>
+</head>
+
+<body>
+    <h3>Vous avez reçu un nouveau mail :</h3>
+    <h5> Concernant : {{ contact.property.title }}</h5>
+    <table>
+        <tr>
+            <td>Prenom:</td>
+            <td>{{ contact.firstname }}</td>
+        </tr>
+        <tr>
+            <td>Nom:</td>
+            <td>{{ contact.lastname }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ contact.email }}</td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td>{{ contact.phone }}</td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td>{{ contact.message | nl2br }}</td>
+        </tr>
+    </table>
+</body>
+
+</html>

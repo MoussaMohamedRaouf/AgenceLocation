@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block title 'Agence lorem ipsum' %}
+
+{% block body %}
+<div class="jumbotro text-center">
+<h1>Agence Toscana</h1>
+<p>
+Le Groupe Tecnocasa est un réseau d’agences immobilières en franchises, auquel s’ajoute également un réseau d’intermédiation financière.
+
+Tecnocasa offre des services d’intermédiation immobilière pour l’achat, la vente ou la location de biens immobiliers résidentiels ou pour entreprises et commerces.
+
+A travers ses jeunes experts, sa gamme complète de services et sa méthode unique de travail, Tecnocasa a pu se distinguer et se développer rapidement en Italie et dans le monde.
+
+Présente en Tunisie depuis 2009, Tecnocasa constitue aujourd’hui le plus grand réseau d’agences immobilières dans le pays avec 25 agences et plus de 170 experts répartis sur différentes zones du Grand Tunis, Nabeul, Hammamet, Sousse, Monastir, Mahdia et Djerba.</p>
+</div>
+
+  <div class="container">
+  <h2> Les derniers biens rajoutés:</h2>
+    <div class="row flex">
+      {% for property in properties %}
+        <div class="col-md-4">
+            {% include 'property/_property.html.twig' %}
+        </div>
+
+
+
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
